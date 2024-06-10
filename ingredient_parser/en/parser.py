@@ -27,7 +27,7 @@ def load_model_if_not_loaded():
     try:
         TAGGER.info()
     except RuntimeError:
-        with as_file(files(__package__) / "model.en.crfsuite") as p:
+        with as_file(files(__package__) / "model.6k.en.crfsuite") as p:
             TAGGER.open(str(p))
 
 
